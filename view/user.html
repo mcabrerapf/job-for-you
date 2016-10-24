@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div ng-controller="searchBySalary">
+		<form ng-submit="findBestSalary($event)" action="">
+			<label for="input-id" class="col-sm-2"></label>
+			<input ng-model= "fieldName" type="search" name="" id="input" class="form-control" value="" required="required" title="">
+			<button type="button" class="btn btn-default">Submit</button>
+		</form>
+
+	</div>
+	<h2>{{fieldName}}</h2>
+	<script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js "></script>
+
+	<script src="../js/app.js"></script>
+	<script src="../js/controllers.js"></script>
+	<script src="../js/service.js"></script>
+</body>
+</html>
