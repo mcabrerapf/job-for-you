@@ -6,7 +6,7 @@ angular.module("myApp")
 	}
 
 	function getCandidate() {
-		return url=("test.json");
+		return $http.get("test.json");
 	}
 	function getRegion(Name) {
 		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&province=" + Name)
