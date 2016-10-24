@@ -6,18 +6,28 @@
 </head>
 <body>
 
-<div ng-controller="searchBySalary">
-		<form ng-submit="findBestSalary($event)" action="">
-			<label for="input-id" class="col-sm-2"></label>
-			<input ng-model= "fieldName" type="search" name="" id="input" class="form-control" value="" required="required" title="">
-			<button type="button" class="btn btn-default">Submit</button>
-		</form>
+	<div class="container" ng-controller="searchBySalary">
 
+	<div class="jumbotron" >
+		<div class="container">
+			
+			<form ng-submit="findBestSalary($event)" action="" method="POST" class="form-inline" role="form">
+
+				<div class="form-group">
+					<input type="text" class="form-control" id="" placeholder="Input artist name...">
+				</div>
+
+				<button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		</div>
 	</div>
+
+
 	<h2>{{fieldName}}</h2>
 	<script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js "></script>
-
+	
 	<script src="../js/app.js"></script>
+	<script src="../test.jason"></script>
 	<script src="../js/controllers.js"></script>
 	<script src="../js/service.js"></script>
 </body>
