@@ -9,6 +9,9 @@ angular.module("myApp")
 			.then( function(response) {
 				console.log("yes")
 				console.log(response)
+				$scope.ofertas = response.data[0].offers
+				console.log($scope.ofertas)
+				
 
 			})
 

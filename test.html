@@ -10,6 +10,13 @@
 		<button ng-click="findBestSalary($event)">send</button>
 	</div>
 
+	<div>
+		<ul>
+			<li ng-repeat="offer in ofertas">{{offer.title}}</li>
+		</ul>
+		
+	</div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="test.json"></script>
