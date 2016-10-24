@@ -1,11 +1,12 @@
 angular.module("myApp")
 .controller("searchBySalary", function($scope, $rootScope, getInfoService) {
-	$scope.findBestSalary = function(e) {
-
-		getInfoService.getCompany($scope.fieldName)
+	$scope.findBestSalary = function() {
+		console.log($scope.algo);
+		/*getInfoService.getCompany($scope.fieldName)
 		.then( function(response) {
 			console.log(response)
-			$scope.ofertas = response.data.offers
+			$scope.ofertas = response.data.offers*/
+	}
 			
 })
 
