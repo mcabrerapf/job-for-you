@@ -1,0 +1,22 @@
+.header  {
+	
+}
+
+.logo {
+	width: 20%;
+}
+.op1 {
+	width: 30%;
+	text-align: center;
+}
+.op2 {
+	width: 30%;
+	text-align: center;
+}
+.link{
+	display: inline-block;
+}
+#myform {
+	clear: all;
+	margin: 10px auto;	
+}
