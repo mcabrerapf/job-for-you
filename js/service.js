@@ -1,24 +1,20 @@
 angular.module("myApp")
 .factory('getInfoService', function($http) {
 
-	function getOfferts() {
-		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&salaryMin=1500");
+	function getOffers(fieldName) {
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=500&q=" + fieldName);
 	}
 
-	function getCandidate() {
-		return $http.get("test.json");
+	function getRegion(regionName) {
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&showPay=true&salaryMin=2000&maxResults=500&province=" + regionName)
 	}
-	function getRegion(Name) {
-		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&province=" + Name)
-	}
-	function getCompany(category) {
-		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&category=" + category)
+	function getCompany() {
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=500&order=author")
 	}
 
 
 	return {
-		getOfferts: getOfferts,
-		getCandidate: getCandidate,
+		getOffers: getOffers,
 		getRegion: getRegion,
 		getCompany: getCompany
 		
@@ -26,3 +22,4 @@ angular.module("myApp")
 })
 
 
+// "https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=100&companyName=dialoga-groups"

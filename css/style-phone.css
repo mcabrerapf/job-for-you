@@ -1,0 +1,17 @@
+body{
+	background-image: url(../img/background/photo-1467155679845-414db2d0bdad.jpg);
+	background-position: 0px -95px;
+	background-attachment: scroll;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+
+}
+.options{
+	width: 80%;
+	margin: 10px auto;
+	margin-top: 80px;
+}
+.options>div{
+	margin-top: 20px;
+}

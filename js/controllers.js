@@ -1,22 +1,35 @@
 angular.module("myApp")
 
 .controller("searchBySalary", function($scope, getInfoService ) {
-	$scope.findBestSalary = function(e) {
+	$scope.findBestSalaryRegion = function(e) {
 		e.preventDefault();
-		console.log("hello")
-
-		getInfoService.getCandidate()
+		getInfoService.getRegion($scope.regionName)
 			.then( function(response) {
-				console.log("yes")
-				console.log(response)
-				$scope.ofertas = response.data[0].offers
+				$scope.ofertasR = response.data.offers
 				console.log($scope.ofertas)
 				
-
 			})
 
+	}
+	$scope.findBestSalaryField = function(e) {
+		e.preventDefault();
+		getInfoService.getOffers($scope.fieldName)
+			.then( function(response) {
+				$scope.ofertasF = response.data.offers
+				console.log($scope.ofertas)
+				
+			})
 
+	}
 
+	$scope.findBestSalaryCompany = function(e) {
+		e.preventDefault();
+		getInfoService.getCompany()
+			.then( function(response) {
+				$scope.ofertasC = response.data.offers
+				console.log($scope.ofertas)
+				
+			})
 
 	}
 })
