@@ -3,42 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/individuals.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Title</a>
-			</div>
+	<header>
+	<ul>
+		<li class="logo link"><div>Logo</div></li>
+		<li class="op1 link"><div ><a href="#">opcion 1</a></div></li>
+		<li  class="op2 link"><div><a href="#">opcion 2</a></div></li>
+	</ul>	
+	</header>
 	
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="menu collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
+	<div class="container">
+	<form id="myform" action="">
+		<div class="row"> 	
+    			<div class="input-group">
+     				<span class="input-group-btn">
+        				<button class="btn btn-default" type="button">Go!</button>
+      				</span>
+      				<input type="text" class="form-control" placeholder="Search for...">
+    			</div>
 		</div>
-	</nav>
-	
-	<div class="container form-container">
-		<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Buscar">
-					</div>
-					<button type="submit" class="btn btn-default">Buscar</button>
-		</form>
+	</form>
 	</div>
-	
 </body>
 </html>
