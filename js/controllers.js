@@ -32,10 +32,11 @@ angular.module("myApp")
 		})
 
 	}
-	$scope.findBestCompanyOffers = function(e) {
-		e.preventDefault();
-		console.log($scope.companyName)
-		getInfoService.getCompanyOffers($scope.companyName)
+	$scope.findBestCompanyOffers = function( companyName ) {
+		
+		console.log(companyName);
+
+		getInfoService.getCompanyOffers(companyName)
 		.then( function(response) {
 			$scope.ofertasCC = response.data.offers
 			console.log($scope.ofertasCC)
@@ -46,7 +47,7 @@ angular.module("myApp")
 
 })
 .controller('homeController',function(){
-	$scope.class = 
+	$scope.class = "yes"
 	
 })
 
