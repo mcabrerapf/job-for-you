@@ -1,6 +1,7 @@
 angular.module("myApp")
 
 .controller("searchBySalary", function($scope, getInfoService ) {
+	$scope.homeClass = view;
 	$scope.findBestSalaryRegion = function(e) {
 		e.preventDefault();
 		getInfoService.getRegion($scope.regionName)
@@ -47,8 +48,7 @@ angular.module("myApp")
 
 })
 .controller('homeController',function(){
-	$scope.class = "yes"
-	
+	$scope.homeClass = home;
 })
 
 

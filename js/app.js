@@ -4,7 +4,7 @@ angular.module("myApp", ['ngRoute'])
 			$routeProvider
 				.when('/', {
 					templateUrl: 'view/home.html',
-					controller: 'searchBySalary'
+					controller: 'homeController'
 				})
 				.when('/sector', {
 					templateUrl: 'view/sector.html',
