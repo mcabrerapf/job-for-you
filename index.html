@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Jobs4U</title>
@@ -10,10 +10,15 @@
 </head>
 <body>
 
-	<div class="options container row">
-		<div class="companies col-md-6"><button type="button" class="btn buttonMenu">Empresas</button></div>
-		<div class="individuals col-md-6"><button type="button" class="btn buttonMenu">Particulares</button></div>
-	</div>
+	<ng-view>
+		
+	</ng-view>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/sevice.js"></script>
 	
 </body>
 </html>
