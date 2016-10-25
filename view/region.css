@@ -1,0 +1,39 @@
+body {
+	background-color: #B8BAB9;
+}
+
+.navbar {
+	background-color: #EDF0F5;
+	height: 200px;
+}
+
+.nav.nav-center {
+    margin:0;
+    float:none;
+}
+
+.navbar-inner{
+    text-align:center;
+}
+
+.main {
+	width: 80%;
+	height: auto;
+	background-color: #272822;
+	display: inline-block;
+	position: absolute;
+	left: 10%;
+	margin-top: -10%;
+	padding: 3%;
+}
+
+#ofert {
+	background-color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+
