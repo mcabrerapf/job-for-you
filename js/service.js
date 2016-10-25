@@ -11,12 +11,16 @@ angular.module("myApp")
 	function getCompany() {
 		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=50&order=author")
 	}
+		function getCompanyOffers(companyName) {
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=50&order=author&companyName=" + companyName)
+	}
 
 
 	return {
 		getOffers: getOffers,
 		getRegion: getRegion,
-		getCompany: getCompany
+		getCompany: getCompany,
+		getCompanyOffers: getCompanyOffers
 		
 	}
 })
