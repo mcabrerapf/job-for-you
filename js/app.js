@@ -8,15 +8,15 @@ angular.module("myApp", ['ngRoute'])
 				})
 				.when('/sector', {
 					templateUrl: 'view/sector.html',
-					controller: 'searchBySalary'
+					controller: 'findBestSalaryField'
 				})
 				.when('/region', {
 					templateUrl: 'view/region.html',
-					controller: 'searchBySalary'
+					controller: 'findBestSalaryRegion'
 				})
 				.when('/companies', {
 					templateUrl: 'view/companies.html',
-					controller: 'searchBySalary'
+					controller: 'findBestSalaryCompany'
 				})
 				.otherwise({redirectTo: '/'});
 
