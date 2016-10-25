@@ -4,6 +4,7 @@ angular.module("myApp")
 
 	$scope.findBestSalaryByRegion = function(e) {
 		e.preventDefault();
+		console.log("yes")
 		getInfoService.getRegion($scope.regionName)
 		.then( function(response) {
 			$scope.ofertas = response.data.offers

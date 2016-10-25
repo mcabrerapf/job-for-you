@@ -32,19 +32,19 @@
 				<div class="row"> 	
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Search!</button>
+							<button ng-click="findBestSalaryByRegion($event)" class="btn btn-default" type="button">Search!</button>
 						</span>
-						<input type="text" class="form-control" placeholder="Type your region...">
+						<input ng-model="regionName" type="text" class="form-control" placeholder="Type your region...">
 					</div>
 				</div>
 			</form>
 		</div>
 
-		<div id="ofert" class="row">
-			<a href=""><h2 class="col-sm-12">Programador</h2></a>
-			<p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, soluta!</p>
-			<p class="col-sm-6">Infojobs</p>
-			<p class="col-sm-1 col-sm-offset-5">22.000</p>
+		<div ng-repeat="offer in ofertas" id="ofert" class="row">
+			<a href=""><h2 class="col-sm-12">{{offer.title}}</h2></a>
+			<p class="col-sm-12">{{offer.requirementMin}}</p>
+			<p class="col-sm-6"><a ng-click="findByBestCompanyOffers(offer.author.name)" href="">{{offer.author.name}}</a></p>
+			<p class="col-sm-1 col-sm-offset-5">{{offer.salaryMax.value}}</p>
 			
 		</div>
 			
