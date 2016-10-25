@@ -1,9 +1,13 @@
 body {
 	background-color: #B8BAB9;
+	/*background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-position:bottom;*/
 }
 
 .navbar {
-	background-color: #EDF0F5;
+	background-color:#EDF0F5;
 	height: 200px;
 }
 
