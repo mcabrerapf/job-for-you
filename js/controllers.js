@@ -6,7 +6,7 @@ angular.module("myApp")
 		getInfoService.getRegion($scope.regionName)
 			.then( function(response) {
 				$scope.ofertasR = response.data.offers
-				console.log($scope.ofertas)
+				console.log($scope.ofertasR)
 				
 			})
 
@@ -16,7 +16,7 @@ angular.module("myApp")
 		getInfoService.getOffers($scope.fieldName)
 			.then( function(response) {
 				$scope.ofertasF = response.data.offers
-				console.log($scope.ofertas)
+				console.log($scope.ofertasF)
 				
 			})
 
@@ -27,7 +27,7 @@ angular.module("myApp")
 		getInfoService.getCompany()
 			.then( function(response) {
 				$scope.ofertasC = response.data.offers
-				console.log($scope.ofertas)
+				console.log($scope.ofertasC)
 				
 			})
 
