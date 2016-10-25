@@ -48,6 +48,6 @@ angular.module("myApp")
 
 	}
 })
-.controller('homeController',function(){
-    $scope.homeClass = home;
+.controller('homeController',function($scope){
+    $scope.classController = 'home';
 })
