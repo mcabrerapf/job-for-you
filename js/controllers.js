@@ -10,6 +10,14 @@ angular.module("myApp")
 		})
 
 	}
+	$scope.findByBestCompanyOffers = function( companyName ) {
+		getInfoService.getCompanyOffers(companyName)
+		.then( function(response) {
+			$scope.ofertasCC = response.data.offers
+			console.log($scope.ofertasCC)
+		})
+
+	}
 })
 
 //Filters by work field
@@ -20,6 +28,14 @@ angular.module("myApp")
 		getInfoService.getOffers($scope.fieldName)
 		.then( function(response) {
 			$scope.ofertas = response.data.offers
+		})
+
+	}
+	$scope.findByBestCompanyOffers = function( companyName ) {
+		getInfoService.getCompanyOffers(companyName)
+		.then( function(response) {
+			$scope.ofertasCC = response.data.offers
+			console.log($scope.ofertasCC)
 		})
 
 	}
@@ -35,10 +51,6 @@ angular.module("myApp")
 		})
 
 	}
-
-})
-//Shows all offers by specific company
-.controller("findBestSalaryCompanyOffers", function($scope, getInfoService ) {
 	$scope.findByBestCompanyOffers = function( companyName ) {
 		getInfoService.getCompanyOffers(companyName)
 		.then( function(response) {
@@ -47,7 +59,19 @@ angular.module("myApp")
 		})
 
 	}
+
 })
+//Shows all offers by specific company
+// .controller("findBestSalaryCompanyOffers", function($scope, getInfoService ) {
+// 	$scope.findByBestCompanyOffers = function( companyName ) {
+// 		getInfoService.getCompanyOffers(companyName)
+// 		.then( function(response) {
+// 			$scope.ofertasCC = response.data.offers
+// 			console.log($scope.ofertasCC)
+// 		})
+
+// 	}
+// })
 .controller('homeController',function($scope){
-    $scope.classController = 'home';
+	$scope.classController = 'home';
 })
