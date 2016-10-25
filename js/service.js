@@ -9,7 +9,7 @@ angular.module("myApp")
 		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&showPay=true&salaryMin=2000&maxResults=50&province=" + regionName)
 	}
 	function getCompany() {
-		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=50&order=author")
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=100000&maxResults=10&order=author")
 	}
 		function getCompanyOffers(companyName) {
 		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=2000&maxResults=50&order=author&companyName=" + companyName)
