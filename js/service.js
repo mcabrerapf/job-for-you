@@ -2,7 +2,7 @@ angular.module("myApp")
 .factory('getInfoService', function($http) {
 
 	function getOfferts() {
-		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&salaryMin=500");
+		return $http.get("https://api.infojobs.net/api/1/offer?contractType=indefinido&salaryMin=1500");
 	}
 
 	function getCandidate() {
