@@ -1,20 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lobster');
 
-
-
-.background {
-	background-image: url(../img/background/build1.jpg);
+body {
+	background-image: url(../img/background.png);
 	background-repeat: no-repeat;
 	background-size:100%;
+	background-position:0px 250%;
 	font-family: 'Lobster';
 
 }
-.backBody{
-	background: white;
-}
 
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 .options {
@@ -24,7 +20,7 @@
 }
 
 .buttonMenu {
-	color: white;
+	color: black;
 	font-family: 'Lobster';
 	font-size: 28px;
 	text-decoration: none;
@@ -35,4 +31,11 @@
 	box-shadow: 0 10px 15px black;
 	background: #829ecc;
 }
+#myButton:hover{
+	margin:5% auto;
+	color: #eee;
+
+}
+
+
 
