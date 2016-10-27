@@ -2,54 +2,69 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Region</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/region.css">
-	
 </head>
 <body>
-	<div class="navbar">
-		<div class="container-fluid navbar-inner">
-			<a class="navbar-brand col-lg-3" href="#/">Job4You</a>
-			<ul class="nav navbar-nav nav-center row">
-				<li class="active col-lg-3">
-						<a href="#/region">Region</a>
-				</li>
-				<li class="col-lg-3">
-						<a href="#/sector">Sector laboral</a>
-				</li>
-				<li class="col-lg-3">
-						<a href="#/companies">Companies</a>
-				</li>
-			</ul>
-		</div>
-	</div>
 
-	<div class="container main">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img height="30" src="" >
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-		<div id=" searchInput">
-			<form id="myform" action="">
-				<div class="row"> 	
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button ng-click="findBestSalaryByRegion($event)" class="btn btn-default" type="button">Search!</button>
-						</span>
-						<input ng-model="regionName" type="text" class="form-control" placeholder="Type your region...">
-					</div>
-				</div>
-			</form>
-		</div>
+      <div id="bs-navbar-collapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/region">Region</a></li>
+          <li><a href="#/sector">Sector</a></li>
+          <li><a href="#/companies">Empresas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-		<div ng-repeat="offer in ofertas" id="ofert" class="row">
-			<a href=""><h2 class="col-sm-12">{{offer.title}}</h2></a>
-			<p class="col-sm-12">{{offer.requirementMin}}</p>
-			<p class="col-sm-6"><a ng-click="findByBestCompanyOffers(offer.author.name)" href="">{{offer.author.name}}</a></p>
-			<p class="col-sm-1 col-sm-offset-5">{{offer.salaryMax.value}}</p>
-			
-		</div>
-			
+  
+  <header>
+    <div class="container">
+      <div class="text-header">
+       <h1><span class="glyphicon glyphicon-globe"></span>  Lorem</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, assumenda.</p>    
+     </div>
+   </div>
+ </header>
 
-	</div>
+ <main>
+  <div class="container myContainer">
+    <div id=" searchInput">
+      <form id="searchInput" action="">   
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button ng-click="findBestSalaryByRegion($event)" class="btn btn-default" type="button">Search!</button>
+          </span>
+          <input ng-model="regionName" type="text" class="form-control" placeholder="Type your region...">
+        </div>
+      </form>
+    </div>
+    
+    <button type="button" class="btn btn-default">button</button>
+    
+    	<div ng-repeat="offer in ofertas" id="myOfer" class="bs-callout bs-callout-primary">
+    		<h2>{{offer.title}}</h2>
+    		<p>{{offer.requirementMin}}</p>
+    		<a href="">{{offer.author.name}}</a>
+    		<a href="">{{offer.salaryMax.value}}</a>
+    	</div>
+  </div>
+</main>
 
 </body>
 </html>
