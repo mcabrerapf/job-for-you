@@ -40,9 +40,9 @@
 			</form>
 		</div>
 
-		<div ng-repeat="offer in ofertas" id="ofert" class="row">
+		<div ng-repeat="offer in ofertas | orderBy : '-salarioM'" id="ofert" class="row">
 			<a href=""><h2 class="col-sm-12">{{offer.title}}</h2></a>
-			<p class="col-sm-12">{{offer.requirementMin}}</p>
+			<p class="col-sm-12">{{offer.descripti}}</p>
 			<p class="col-sm-6"><a ng-click="findByBestCompanyOffers(offer.author.name)" href="">{{offer.author.name}}</a></p>
 			<p class="col-sm-1 col-sm-offset-5">{{offer.salaryMax.value}}</p>
 			
