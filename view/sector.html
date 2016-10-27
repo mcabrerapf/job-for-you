@@ -48,16 +48,16 @@
       <form id="searchInput" action="">   
         <div class="input-group">
           <span class="input-group-btn">
-            <button ng-click="findBestSalaryByRegion($event)" class="btn btn-default" type="button">Search!</button>
+            <button ng-click="findBestSalaryByField($event)" class="btn btn-default" type="button">Search!</button>
           </span>
-          <input ng-model="regionName" type="text" class="form-control" placeholder="Type your sector...">
+          <input ng-model="fieldName" type="text" class="form-control" placeholder="Type your sector...">
         </div>
       </form>
     </div>
     
-    <div ng-repeat="offer in ofertas" id="myOfer" class="bs-callout bs-callout-primary">
+    <div ng-repeat="offer in ofertas  | orderBy : '-salarioM'" id="myOfer" class="bs-callout bs-callout-primary">
       <h2>{{offer.author.name}}</h2>
-      <p>{{offer.requirementMin}}</p>
+      <p>{{offer.descripti}}</p>
       <a href="">Barcelona</a>
       <a href="">{{offer.salaryMax.value}}</a>
 
