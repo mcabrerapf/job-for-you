@@ -6,7 +6,7 @@ angular.module("myControllers")
 		$rootScope.section = 'companies';
 		$rootScope.sectionIcon = 'briefcase';
 		$rootScope.sectionTitle = 'Compañias';
-		$rootScope.sectionDescription = 'Top 5 compañias mejores pagadas.';
+		$rootScope.sectionDescription = 'Top 5 mejores compañias.';
 
 		$scope.findBestSalaryByCompany = function(e) {
 			e.preventDefault();
