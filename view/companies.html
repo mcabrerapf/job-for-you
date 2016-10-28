@@ -1,16 +1,17 @@
- <a href="#" ng-click="findBestSalaryByCompany($event)" type="button">
+
+<a href="#" ng-click="findBestSalaryByCompany($event)" type="button">
+
   <div class="button-fill grey show">
     <div class="button-text">Show</div>
     <div class="button-inside">
       <div class="inside-text">Show</div>
     </div>
-  </div></a>
+  </div>
+</a>
 
-
-  <div ng-repeat="offer in ofertasFinal | limitTo: 5 |  orderBy : '-value'" >
-   <a ng-href="#/companies/{{offer.name}}">
-    <button type="button" class="btn btn-primary btn-block">Button 1</button></a>
-
+<div class="myContainer companies">
+  <div ng-repeat="offer in ofertasFinal | limitTo: 5 |  orderBy : '-value'" id="myOfer" class="bs-callout bs-callout-primary companies">
+    <h2>{{offer.name}}</h2>
   </div>
   
   
