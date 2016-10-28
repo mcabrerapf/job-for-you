@@ -6,7 +6,7 @@ angular.module("myApp")
 	}
 
 	function getRegion(regionName) {
-		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=1000&maxResults=60&province=" + regionName)
+		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=1000&maxResults=60&city=" + regionName)
 	}
 	function getCompany() {
 		return $http.get("https://boiling-plains-16324.herokuapp.com/offer?contractType=indefinido&salaryMin=60000&maxResults=500&order=author")
