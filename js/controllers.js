@@ -29,11 +29,17 @@ angular.module("myApp")
 
 	}
 	$scope.findByBestCompanyOffers = function( companyName ) {
-
+		console.log(companyName)
 		getInfoService.getCompanyOffers(companyName)
 		.then( function(response) {
 			$scope.ofertasCC = response.data.offers
 			console.log($scope.ofertasCC)
+			for (i=0; i < $scope.ofertasCC.length; i++){				
+				$scope.sal = $scope.ofertasCC[i].salaryMax.value
+				$scope.salari = $scope.sal.replace(".","")				
+				$scope.salario = $scope.salari.replace("€","")				
+				$scope.ofertasCC[i].salarioM = Number($scope.salario)
+			}
 		})
 
 	}
@@ -72,6 +78,12 @@ angular.module("myApp")
 		.then( function(response) {
 			$scope.ofertasCC = response.data.offers
 			console.log($scope.ofertasCC)
+			for (i=0; i < $scope.ofertasCC.length; i++){				
+				$scope.sal = $scope.ofertasCC[i].salaryMax.value
+				$scope.salari = $scope.sal.replace(".","")				
+				$scope.salario = $scope.salari.replace("€","")				
+				$scope.ofertasCC[i].salarioM = Number($scope.salario)
+			}
 		})
 
 	}
@@ -137,22 +149,17 @@ angular.module("myApp")
 		.then( function(response) {
 			$scope.ofertasCC = response.data.offers
 			console.log($scope.ofertasCC)
+			for (i=0; i < $scope.ofertasCC.length; i++){				
+				$scope.sal = $scope.ofertasCC[i].salaryMax.value
+				$scope.salari = $scope.sal.replace(".","")				
+				$scope.salario = $scope.salari.replace("€","")				
+				$scope.ofertasCC[i].salarioM = Number($scope.salario)
+			}
 		})
 
 	}
 
 })
-//Shows all offers by specific company
-// .controller("findBestSalaryCompanyOffers", function($scope, getInfoService ) {
-// 	$scope.findByBestCompanyOffers = function( companyName ) {
-// 		getInfoService.getCompanyOffers(companyName)
-// 		.then( function(response) {
-// 			$scope.ofertasCC = response.data.offers
-// 			console.log($scope.ofertasCC)
-// 		})
-
-// 	}
-// })
 .controller('homeController',function($scope){
 	$scope.classController = 'home';
 })
