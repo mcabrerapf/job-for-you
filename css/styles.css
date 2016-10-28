@@ -6,7 +6,9 @@
 .navbar {
 	margin:0;
 }
-
+.logo{
+  margin-top: 5px;
+}
 body {
 	background-color: #6d6f75;
 }
@@ -31,7 +33,7 @@ header {
     margin: 0px;
     padding: 0px;
     border-bottom: 1px solid #191919;
-    background-position: 0 17%;
+    background-position: 0 34%;
     height: 230px;
 
 }
@@ -51,6 +53,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
 
+}
+.myContainer.companies{
+  text-align: center;
 }
 #myOfer{
     width: 49%;
@@ -224,14 +229,9 @@ body.home {
 	background-size:100%;
 	background-position:bottom;
 	font-family: 'Lobster';
-	height: 100vh;
+	height: 95vh;
 }
 
-.home .options {
-	width: 60%;
-	margin:10% auto;
-
-}
 
 .home  .buttonMenu {
 	color: black;
@@ -245,11 +245,9 @@ body.home {
 	box-shadow: 0 10px 15px black;
 	background: #829ecc;
 }
-
-.home  #myButton:hover{
-	margin:5% auto;
-	color: #eee;
-
+.home .myHome{
+  width: 80%;
+  margin-left: 32%;
 }
 
 
