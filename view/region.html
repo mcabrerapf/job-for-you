@@ -61,8 +61,8 @@
     	<div ng-repeat="offer in ofertas | orderBy : '-salarioM'" id="myOfer" class="bs-callout bs-callout-primary">
     		<h2>{{offer.title}}</h2>
     		<p>{{offer.descripti}}</p>
-    		<a href="">{{offer.author.name}}</a>
-    		<a href="">{{offer.salaryMax.value}}</a>
+    		<p>{{offer.salaryMax.value}}<a href="">{{offer.author.name}}</a></p>
+    		
     	</div>
   </div>
 </main>
