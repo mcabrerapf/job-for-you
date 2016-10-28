@@ -39,8 +39,8 @@
   <header>
     <div class="container">
       <div class="text-header">
-       <h1><span class="glyphicon glyphicon-globe"></span>  Lorem</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, assumenda.</p>    
+       <h1><span class="glyphicon glyphicon-globe"></span>  Region</h1>
+       <p>Busca el mejor trabajo según tu ciudad o provincia.</p>    
      </div>
    </div>
  </header>
@@ -49,7 +49,7 @@
  <main>
   <div class="container myContainer">
     <div id=" searchInput">
-      <form id="searchInput" action="">   
+      <form ng-submit="findBestSalaryByRegion($event)" id="searchInput" action="">   
         <div class="input-group">
           <span class="input-group-btn">
             <button ng-click="findBestSalaryByRegion($event)" class="btn btn-default" type="button">Search!</button>
