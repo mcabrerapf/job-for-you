@@ -1,9 +1,10 @@
 <div class="myContainer">
 
 	<div ng-repeat="offer in ofertas | orderBy : '-salarioM'" id="myOfer" class="bs-callout bs-callout-primary">
+		
 		<h2>{{offer.title}}</h2>
 		<p>{{offer.descripti}}</p>
-		<p>{{offer.salaryMax.value}} <a ng-click="findByBestCompanyOffers(offer.author.name)" href=""> {{offer.author.name}}</a></p>
+		<p>{{offer.salaryMax.value}} {{offer.author.name}}</a></p>
 		<a type="button" ng-href="{{offer.link}}" class="btn btn-primary">Apply Now</a>
 	</div>
 </div>

@@ -1,5 +1,3 @@
- <link rel="stylesheet" href="../css/region.css">
-
  <a href="#" ng-click="findBestSalaryByCompany($event)" type="button">
   <div class="button-fill grey show">
     <div class="button-text">Show</div>
@@ -10,7 +8,9 @@
 
 
   <div ng-repeat="offer in ofertasFinal | limitTo: 5 |  orderBy : '-value'" >
-    <a ng-href="#/companies/{{offer.name}}"><button  type="button" class="btn btn-primary">{{offer.name}}</button></a>
-    </div>
-   
- 
+   <a ng-href="#/companies/{{offer.name}}">
+    <button type="button" class="btn btn-primary btn-block">Button 1</button></a>
+
+  </div>
+  
+  

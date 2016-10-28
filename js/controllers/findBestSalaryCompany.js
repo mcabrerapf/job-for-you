@@ -50,6 +50,8 @@ angular.module("myControllers")
 					for(k=1; k < $scope.ofertasFinal.length - 1; k++){
 						if($scope.ofertasFinal[j].name == "."){
 							$scope.ofertasFinal.splice(j, 1)
+						}else if($scope.ofertasFinal[j].name == "130 Executive Search (antigua: Arambarri & González)"){
+							$scope.ofertasFinal.splice(j, 1)
 						}else if ($scope.ofertasFinal[j].name == $scope.ofertasFinal[k + 1].name){
 							$scope.ofertasFinal.splice((k+1), 1)
 						}
