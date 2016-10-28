@@ -1,63 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Region</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="../css/region.css">
-</head>
-<body>
+ <link rel="stylesheet" href="../css/region.css">
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img height="30" src="" >
-        </a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div id="bs-navbar-collapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#/region">Region</a></li>
-          <li><a href="#/sector">Sector</a></li>
-          <li><a href="#/companies">Empresas</a></li>
-        </ul>
-      </div>
+ <a href="#" ng-click="findBestSalaryByCompany($event)" type="button">
+  <div class="button-fill grey show">
+    <div class="button-text">Show</div>
+    <div class="button-inside">
+      <div class="inside-text">Show</div>
     </div>
-  </nav>
+  </div></a>
 
-  
-  <header>
-    <div class="container">
-      <div class="text-header">
-       <h1><span class="glyphicon glyphicon-briefcase"></span>  Compañias</h1>
-       <p>Top 5 compañias mejores pagadas.</p>    
-     </div>
-   </div>
- </header>
-
- <main>   
-  
-
-  <a href="#" ng-click="findBestSalaryByCompany($event)" type="button">
-    <div class="button-fill grey show">
-      <div class="button-text">Show</div>
-      <div class="button-inside">
-        <div class="inside-text">Show</div>
-      </div>
-    </div></a>
-
-    <div ng-repeat="offer in ofertasFinal | limitTo: 5 |  orderBy : '-value'" id="myOfer" class="bs-callout bs-callout-primary companies">
-      <h2>{{offer.name}}</h2>
-    </div>
-</main>
-
-</body>
-
-</html>
+<div class="myContainer">
+  <div ng-repeat="offer in ofertasFinal | limitTo: 5 |  orderBy : '-value'" id="myOfer" class="bs-callout bs-callout-primary companies">
+    <h2>{{offer.name}}</h2>
+  </div>
+ </div>

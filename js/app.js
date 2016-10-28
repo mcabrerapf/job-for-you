@@ -1,4 +1,4 @@
-angular.module("myApp", ['ngRoute'])
+angular.module("myApp", ['ngRoute', 'myControllers'])
 	.config( function($routeProvider) {
 
 			$routeProvider
@@ -17,6 +17,10 @@ angular.module("myApp", ['ngRoute'])
 				.when('/companies', {
 					templateUrl: 'view/companies.html',
 					controller: 'findBestSalaryCompany'
+				})
+				.when('/companies/:companyName', {
+					templateUrl: 'view/offersByCompany.html',
+					controller: 'OffersByCompanyCtrl'
 				})
 				.otherwise({redirectTo: '/'});
 
